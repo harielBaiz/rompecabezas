@@ -1,3 +1,10 @@
+function verGrilla(){
+  for(var i=0; i<grilla.length; i++){
+    for(var j=0; j<grilla.length; j++){
+      console.log(grilla[i][j]);
+    }
+  }
+}
 // Representación de la grilla. Cada nro representa a una pieza.
 // El 9 es la posición vacía
 var grilla = [
@@ -5,6 +12,7 @@ var grilla = [
   [4, 5, 6],
   [7, 8, 9]
 ];
+
 
 /* Estas dos variables son para guardar la posición
 de la pieza vacía. Esta posición comienza siendo la [2, 2]*/
@@ -25,8 +33,6 @@ function chequearSiGano(){
   }
   return true;
 }
-
-
 
 // la hacen los alumnos, pueden mostrar el cartel como prefieran. Pero es importante que usen
 // esta función
@@ -64,18 +70,34 @@ teóricas: https://www.acamica.com/cursos/254/javascript-manipulando-dom.
 
 */
 function intercambiarPosiciones(filaPos1, columnaPos1, filaPos2, columnaPos2){
+  var posPieza1 = grilla[filaPos1][columnaPos1];
+  var posPieza2 = grilla[filaPos2][columnaPos2];
+  grilla[filaPos1][columnaPos1] = posPieza2;
+  grilla[filaPos2][columnaPos2] = posPieza1;
 
+  var imagen1 = document.getElementById("pieza"+posPieza1);
+  var imagen2 = document.getElementById("pieza"+posPieza2);
+  var clonImagen1=imagen1.cloneNode(true);
+  var clonImagen2=imagen2.cloneNode(true);
+
+  var padre = imagen1.parentNode;
+
+  padre.replaceChild(clonImagen1, imagen2);
+  padre.replaceChild(clonImagen2, imagen1);
 }
 
 // Actualiza la posición de la pieza vacía
 function actualizarPosicionVacia(nuevaFila,nuevaColumna){
-
+  filaVacia = nuevaFila;
+  columnaVacia = nuevaColumna;
 }
-
-
 // Para chequear si la posicón está dentro de la grilla.
 function posicionValida(fila, columna){
-
+  if (fila>2 || columna>2 || fila<0 || columna<0){
+    return false;
+  } else {
+    return true;
+  }
 }
 
 /* Movimiento de fichas, en este caso la que se mueve
@@ -100,12 +122,13 @@ function moverEnDireccion(direccion){
   }
   // Intercambia pieza blanca con la pieza que está a su izq
   else if (direccion == 39) {
-    // Completar
-
+    nuevaFilaPiezaVacia = filaVacia;
+    nuevaColumnaPiezaVacia = columnaVacia-1;
   }
   // Intercambia pieza blanca con la pieza que está a su der
   else if (direccion == 37) {
-    // Completar
+    nuevaFilaPiezaVacia = filaVacia;
+    nuevaColumnaPiezaVacia = columnaVacia+1;
   }
 
   /* Se chequea si la nueva posición es válida, si lo es, se intercambia.
