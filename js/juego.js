@@ -1,10 +1,3 @@
-function verGrilla(){
-  for(var i=0; i<grilla.length; i++){
-    for(var j=0; j<grilla.length; j++){
-      console.log(grilla[i][j]);
-    }
-  }
-}
 // Representación de la grilla. Cada nro representa a una pieza.
 // El 9 es la posición vacía
 var grilla = [
@@ -13,12 +6,10 @@ var grilla = [
   [7, 8, 9]
 ];
 
-
 /* Estas dos variables son para guardar la posición
 de la pieza vacía. Esta posición comienza siendo la [2, 2]*/
 var filaVacia = 2;
 var columnaVacia = 2;
-
 
 // Esta función va a chequear si el Rompecabezas est&aacute; en la posición ganadora
 function chequearSiGano(){
@@ -139,17 +130,13 @@ function moverEnDireccion(direccion){
     nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia);
     actualizarPosicionVacia(nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia);
   }
-
 }
-
-
 
 /* Las funciones que se encuentran a continuación ya están implementadas.
 No hace falta que entiendas exactamente que es lo que hacen, ya que contienen
 temas aún no vistos. De todas formas, cada una de ellas tiene un comentario
 para que sepas que se está haciendo a grandes rasgos. NO LAS MODIFIQUES a menos que
 entiendas perfectamente lo que estás haciendo! */
-
 
 /* Función que mezcla las piezas del tablero una cantidad de veces dada.
 Se calcula una posición aleatoria y se mueve en esa dirección. De esta forma
@@ -165,7 +152,6 @@ function mezclarPiezas(veces){
     mezclarPiezas(veces-1);
   },100);
 }
-
 /* capturarTeclas: Esta función captura las teclas presionadas por el usuario. Javascript
 permite detectar eventos, por ejemplo, cuando una tecla es presionada y en
 base a eso hacer algo. No es necesario que entiendas como funciona esto ahora,
@@ -186,7 +172,6 @@ function capturarTeclas(){
     }
   })
 }
-
 /* Se inicia el rompecabezas mezclando las piezas 60 veces
 y ejecutando la función para que se capturen las teclas que
 presiona el usuario */
@@ -194,6 +179,5 @@ function iniciar(){
   mezclarPiezas(60);
   capturarTeclas();
 }
-
 // Ejecutamos la función iniciar
 iniciar();

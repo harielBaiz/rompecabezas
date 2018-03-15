@@ -4,60 +4,61 @@
     <meta charset="utf-8">
     <title>BMO Arcade</title>
     <link rel="stylesheet" href="css/juego.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
   </head>
   <body>
     <div class="col-40">
       <div id="titulo">
-        <h1>Rompecabezas</h1>
+        <h1>ROMPECABEZAS</h1>
       </div>
-
-      <div id="instrucciones">
-        <h2>instrucciones</h2>
+      <div id="Instrucciones">
+        <h2>Instrucciones</h2>
         <ul>
           <li>Mover las piezas presionando las teclas de flechas.</li>
           <li>Encontrar el orden correcto de las piezas.</li>
         </ul>
       </div>
-    </div>
+      <div id="miniatura">
+        <h2>Imagen ordenada</h2>
+        <img src="images/miniatura.png" alt="minuatura">
+      </div>
 
+      <div id="botonMezclar">
+        <button class="links" onclick="mezclarPiezas(60)">Mezclar nuevamente</button>
+      </div>
+    </div>
     <div class="col-60">
       <div id="juego">
-
-          <div id="pieza1">
-            <img src="images/10.jpg" alt="piezaA0">
-          </div>
-          <div id="pieza2">
-            <img src="images/20.jpg" alt="piezaA1">
-          </div>
-          <div id="pieza3">
-            <img src="images/30.jpg" alt="piezaA2">
-          </div>
-          <div id="pieza4">
-            <img src="images/40.jpg" alt="piezaB0">
-          </div>
-          <div id="pieza5">
-            <img src="images/50.jpg" alt="piezaB1">
-          </div>
-          <div id="pieza6">
-            <img src="images/60.jpg" alt="piezaB2">
-          </div>
-          <div id="pieza7">
-            <img src="images/70.jpg" alt="piezaC0">
-          </div>
-          <div id="pieza8">
-            <img src="images/80.jpg" alt="piezaC1">
-          </div>
-          <div id="pieza9">
-            
-          </div>
-
+        <div id="pieza1">
+          <img src="images/01.jpg" alt="piezaA0">
+        </div>
+        <div id="pieza2">
+          <img src="images/02.jpg" alt="piezaA1">
+        </div>
+        <div id="pieza3">
+          <img src="images/03.jpg" alt="piezaA2">
+        </div>
+        <div id="pieza4">
+          <img src="images/04.jpg" alt="piezaB0">
+        </div>
+        <div id="pieza5">
+          <img src="images/05.jpg" alt="piezaB1">
+        </div>
+        <div id="pieza6">
+          <img src="images/06.jpg" alt="piezaB2">
+        </div>
+        <div id="pieza7">
+          <img src="images/07.jpg" alt="piezaC0">
+        </div>
+        <div id="pieza8">
+          <img src="images/08.jpg" alt="piezaC1">
+        </div>
+        <div id="pieza9"></div>
       </div>
     </div>
     <div class="footer">
-      <p>Creado por Cosme Fulanito</p>
+      <p>Desarrollado por HAB</p>
     </div>
     <script src="js/juego.js"></script>
-
   </body>
 </html>

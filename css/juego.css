@@ -6,21 +6,33 @@ body {
   width: 940px;
   margin: 5% auto;
   min-height: 100%;
-  background-image: url(../images/adventure.jpg);
+  background-image: url(../images/r&m_background.jpg);
 }
 ul {
   padding-left: 0;
   list-style: none;
+  margin-top: 10px;
 }
 li {
   padding: 5px 0;
 }
 li::before {
   content: "• ";
-  color: #EC6778;
+  color: #bada41;
 }
-h1, h2, p {
-  font-family: 'Roboto', sans-serif;
+h1, h2, p, li, button {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+h1{
+  font-size: 21px;
+  background-color: #bada41;
+  padding: 10px 10px;
+  color: #f2ffff;
+}
+h2{
+  color:#bada41;
+  font-size: 21px;
+  margin: 10px 0 10px 0;
 }
 .col-40, .col-60 {
   display: table-cell;
@@ -29,14 +41,23 @@ h1, h2, p {
   box-sizing: border-box;
 }
 .col-40 {
-  background: #FFF;
-  padding: 30px;
+  background: #f2ffff;
+  padding: 20px 30px 30px 30px;
   color: #000;
   width: 40%;
 }
-
+#miniatura {
+  width: 200px;
+  height: 200px;
+  margin: 20px 0px;
+}
+#miniatura img {
+  width: 100%;
+  height: 100%;
+  background-color: #ed6a3d;
+}
 #juego {
-  background: #333;
+  background: #ed6a3d;
   width: 600px;
   height: 600px;
 }
@@ -51,19 +72,35 @@ h1, h2, p {
   height: 33.33%;
   float: left;
 }
-
+#botonMezclar{
+  margin-top: 70px;
+  text-align: center;
+  border-top: 1px solid #bada41;
+}
+.links {
+    padding: 15px;
+    font-size: 18px;
+    color: #bada41;
+    border: solid 2px #bada41;
+    background-color: #f2ffff;
+    margin-top: 10px;
+}
+.links:hover {
+    margin-left: 20px;
+    color: #ed6a3d;
+    border: solid 1px #ed6a3d;
+}
 @keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
-h2{
-  color:#EC6778;
-}
 .footer {
-  background: #EC6778;
+  background: #98d0d2;
   clear: both;
   padding: 3px 10px;
+  text-align: center;
 }
 .footer p {
-  color: black;
+  color: #f2ffff;
+  font-size: 12px;
 }
